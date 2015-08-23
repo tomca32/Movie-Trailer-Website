@@ -1,5 +1,5 @@
 from movie import Movie
-import fresh_tomatoes
+import page_generator
 
 fountain = Movie(
   "The Fountain",
@@ -19,8 +19,7 @@ sin_city = Movie(
   "http://ia.media-imdb.com/images/M/MV5BMTI2NjUyMDUyMV5BMl5BanBnXkFtZTcwMzU0OTkyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg",
   "https://youtu.be/T2Dj6ktPU5c")
 
-print (fountain.title, fountain.description, fountain.poster_image_url, fountain.trailer_youtube_url)
 
 movies = [fountain, donnie, sin_city]
 
-fresh_tomatoes.open_movies_page(movies)
+page_generator.open_movies_page(movies)
