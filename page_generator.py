@@ -17,6 +17,7 @@ def create_movie_tiles_content(movies):
     for movie in movies:
         content += html.format(
             movie_title = movie.title,
+            movie_year = movie.year,
             poster_image_url = movie.poster_image_url,
             trailer_youtube_id = get_youtube_id(movie.trailer_youtube_url)
         )
@@ -37,7 +38,7 @@ def open_movies_page(movies):
 
     # Replace the movie tiles placeholder generated content
     rendered_content = get_page_body().format(
-        movie_tiles=create_movie_tiles_content(movies))
+        movie_tiles = create_movie_tiles_content(movies))
 
     # Output the file
     output_file.write(get_page_head() + rendered_content)
