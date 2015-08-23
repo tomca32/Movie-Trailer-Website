@@ -17,6 +17,7 @@ def create_movie_tiles_content(movies):
     for movie in movies:
         content += html.format(
             movie_title = movie.title,
+            movie_description = movie.description,
             movie_year = movie.year,
             poster_image_url = movie.poster_image_url,
             trailer_youtube_id = get_youtube_id(movie.trailer_youtube_url)
