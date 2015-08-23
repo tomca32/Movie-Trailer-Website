@@ -7,6 +7,8 @@ $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (eve
 $(document).on('click', '.movie-tile', function (event) {
   var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
   var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+  $("#movie-title").html($(this).data("movie-title"));
+  $("#movie-description").html($(this).data("movie-description"));
   $("#trailer-video-container").empty().append($("<iframe></iframe>", {
     'id': 'trailer-video',
     'type': 'text-html',
