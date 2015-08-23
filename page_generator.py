@@ -2,6 +2,8 @@ import webbrowser
 import os
 import re
 
+template_directory = "templates"
+
 def get_youtube_id(url):
     youtube_id_match = re.search(
         r'(?<=v=)[^&#]+', url)
@@ -21,13 +23,13 @@ def create_movie_tiles_content(movies):
     return content
 
 def get_page_body():
-    return open('frontend/index.html', 'r').read()
+    return open(template_directory + '/index.html', 'r').read()
 
 def get_movie_html():
-    return open('frontend/movie.html', 'r').read()
+    return open(template_directory + '/movie.html', 'r').read()
 
 def get_page_head():
-    return open('frontend/head.html', 'r').read()
+    return open(template_directory + '/head.html', 'r').read()
 
 def open_movies_page(movies):
     # Create or overwrite the output file
